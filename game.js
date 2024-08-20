@@ -12,8 +12,6 @@ function completaking() {
 
 };
 
-completaking();
-
 function namingKing(){
     const kingNames = ["Viden","Kayd","Iphan","Kondor","Nokon","Feron","Pommel","Pyke","Leth","Kaius",
         "Gossa","Brich","Carwel","Famir","Lashur","Alathic","Ellan","Myrril","Teth",
@@ -49,7 +47,7 @@ function increaseYear() {
     yearElement.textContent = year;
 }
 
-setInterval(increaseYear, 120000);
+setInterval(increaseYear, 25000);
 increaseYear();
 
 const btnMilitary = document.getElementById('btn-military');
