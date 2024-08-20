@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "newFont";
+    src: url(fonts/Magnific\ Chaos\ Personal\ Use.ttf);
+}
+
 body{
     --s: 150px; /* control the size*/
     --c1: #68584f;
@@ -7,6 +12,10 @@ body{
       linear-gradient(135deg,#0000 18.75%,var(--c1) 0 31.25%,#0000 0),
       repeating-linear-gradient(45deg,var(--c1) -6.25% 6.25%,var(--c2) 0 18.75%);
     background-size: var(--s) var(--s);     
+}
+
+h2 {
+    font-family: 'newFont';
 }
 
 .container {
@@ -27,6 +36,25 @@ body{
     display: inline;
     }
 
+    .subMenu1 {
+        background-color: #68584f; /* Cor diferente para o submenu (exemplo: Tomate) */
+        padding: 10px;
+        box-sizing: border-box;
+        color: #fcf6e6;
+        border-radius: 5px; /* Para adicionar bordas arredondadas, opcional */
+    }
+    
+    /* Estilo dos links do submenu */
+    .subMenu1 button {
+        color: #fcf6e6;
+        background-color: #333;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: inline;
+        text-align: left;
+    }
+
 .prfImg {
     height: 400px;
     width: 300px; 
@@ -38,7 +66,7 @@ body{
     border:15px solid #68584f;
     }
 
-    .subMenu {
+    .subMenu2 {
         background-color: #68584f; /* Cor diferente para o submenu (exemplo: Tomate) */
         padding: 10px;
         box-sizing: border-box;
@@ -47,7 +75,7 @@ body{
     }
     
     /* Estilo dos links do submenu */
-    .subMenu button {
+    .subMenu2 button {
         color: #fcf6e6;
         background-color: #333;
         border: none;

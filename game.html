@@ -9,33 +9,36 @@
 <body>
     <div class="container">
         <div class="div1">
-            <h1>Imperador: </h1>
+            <div class="subMenu1">
+                <button id="btn-emp">Emperor</button>
+                <button id="btn-kin">Kingdom</button>
+            </div>
+            <div id="content1" class="content1"></div>
+            <h1>Emperor: <span id="kingname"></span>, <span id="title"></span>The untitled</h1>
+            <h1>Month: <span id="month">0</span>, Year: <span id="year">0</span></h1>
             <img class="prfImg" src="Image_Editor (1).png" alt="Imperador">
 
-            <h1>Year: <span id="year">0</span></h1>
-
             <h1>Status</h1>
-            <h2>💲 Economy 💲</h2>
-            <h2>🙎‍♂️ Population 🙎‍♀️</h2>
-            <h2>🤍 Religion 🤍</h2>
+            <h2> Economy </h2>
+            <h2> Population </h2>
+            <h2> Religion </h2>
         </div>
 
         <div class="div2">
-            <div class="subMenu">
+            <div class="subMenu2">
                 <button id="btn-military">Military</button>
                 <button id="btn-map">Map</button>
                 <button id="btn-battle">Battle</button>
             </div>
-            <div id="content" class="content">
+            <div id="content2" class="content2">
             </div>
 
         </div>
 
         <div class="div3">
-            <!-- Conteúdo adicional aqui -->
+            <h1>Policies</h1> 
         </div>
     </div>
     <script src="game.js"></script>
-    <link rel="stylesheet" href="../Game/phpFiles/battle.php">
 </body>
 </html>
