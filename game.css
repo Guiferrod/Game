@@ -5,8 +5,8 @@
 
 body{
     --s: 150px; /* control the size*/
-    --c1: #68584f;
-    --c2: #fcf6e6;
+    --c1: #223023;
+    --c2: #D9CCC1;
     
     background:
       linear-gradient(135deg,#0000 18.75%,var(--c1) 0 31.25%,#0000 0),
@@ -14,7 +14,7 @@ body{
     background-size: var(--s) var(--s);     
 }
 
-h2 {
+ h1, h2 {
     font-family: 'oldeEngFont', sans-serif;
     font-size: xx-large;
 }
@@ -32,28 +32,34 @@ h2 {
 
         /* Diferenciando as divs com cores */
 .div1 {
-    background-color: #fcf6e6; /* Amarelo */
-    border:solid 15px #68584f;
+    background-color: #D9CCC1; /* Amarelo */
+    border:solid 5px #DB863B;
+    border-right: none;
     display: inline;
     }
 
     .subMenu1 {
-        background-color: #68584f; /* Cor diferente para o submenu (exemplo: Tomate) */
+        background-color: #D9CCC1; /* Cor diferente para o submenu (exemplo: Tomate) */
         padding: 10px;
         box-sizing: border-box;
-        color: #fcf6e6;
-        border-radius: 5px; /* Para adicionar bordas arredondadas, opcional */
+        color: #D9CCC1;
     }
     
     /* Estilo dos links do submenu */
     .subMenu1 button {
-        color: #fcf6e6;
-        background-color: #333;
+        color: #D9CCC1;
+        background-color: #223023;
+        border-radius: 5px;
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         display: inline;
         text-align: left;
+    }
+
+    .subMenu1 button:hover {
+        color: black;
+        background-color: white;
     }
 
 .prfImg {
@@ -65,22 +71,23 @@ h2 {
 
 
 .div2 {
-    background-color: #fcf6e6; /* Azul */
-    border:15px solid #68584f;
+    background-color: #D9CCC1; /* Azul */
+    border:solid 5px #DB863B;
+    border-right: none;
     }
 
     .subMenu2 {
-        background-color: #68584f; /* Cor diferente para o submenu (exemplo: Tomate) */
+        background-color: #D9CCC1; /* Cor diferente para o submenu (exemplo: Tomate) */
         padding: 10px;
         box-sizing: border-box;
-        color: #fcf6e6;
-        border-radius: 5px; /* Para adicionar bordas arredondadas, opcional */
+        color: #D9CCC1;
     }
     
     /* Estilo dos links do submenu */
     .subMenu2 button {
-        color: #fcf6e6;
-        background-color: #333;
+        color: #D9CCC1;
+        background-color: #223023;
+        border-radius: 5px;
         border: none;
         padding: 10px 20px;
         cursor: pointer;
@@ -88,8 +95,13 @@ h2 {
         text-align: left;
     }
 
+    .subMenu2 button:hover {
+        color: black;
+        background-color: white;
+    }
+
     #btn-toBattle{
-        color: #fcf6e6;
+        color: #D9CCC1;
         background-color: #333;
         border: none;
         padding: 10px 20px;
@@ -114,20 +126,49 @@ h2 {
     }
 
     table tr:nth-child(even){
-        background-color: #fcf6e6;
+        background-color: #D9CCC1;
     }
 
     table th{
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: center;
-        background-color: #333;
-        color: #fcf6e6;
+        background-color: #223023;
+        color: #D9CCC1;
+    }
+
+    .btn-toBattle {
+        background-color: #DB863B; /* Cor de fundo do botão */
+        color: #D9CCC1; /* Cor do texto do botão */
+        border: none; /* Remove a borda padrão */
+        padding: 10px 20px; /* Espaçamento interno do botão */
+        cursor: pointer; /* Mostra o cursor de mão ao passar por cima */
+        border-radius: 5px; /* Bordas arredondadas */
+        font-size: 14px; /* Tamanho da fonte */
+        transition: background-color 0.3s ease; /* Animação suave ao mudar a cor de fundo */
+    }
+    
+    /* Efeito ao passar o mouse sobre o botão */
+    .btn-toBattle:hover {
+        color: black;
+        background-color: white;
+    }
+    
+    /* Efeito ao clicar no botão */
+    .btn-toBattle:active {
+        background-color: #823C19; /* Cor de fundo ao clicar no botão */
+        transform: scale(0.95); /* Leve efeito de clique */
+    }
+    
+    /* Estilo específico para botões na tabela, se necessário */
+    table .btn-toBattle {
+        width: 100%; /* O botão ocupa toda a largura da célula */
+        text-align: center; /* Centraliza o texto no botão */
     }
 
 .div3 {
-        background-color: #fcf6e6;
-        border: solid 15px #68584f;
+        background-color: #D9CCC1;
+        border:solid 5px #DB863B;
         height: 100%; /* Garante que ocupe a altura total */
         overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
         padding: 20px;
@@ -138,4 +179,49 @@ h2 {
         margin: 0;
         line-height: 1.6;
     }
+
+/* Estilo para navegadores WebKit (Chrome, Safari, Edge) */
+.div3::-webkit-scrollbar {
+    width: 12px; /* Largura da scrollbar */
+}
+
+.div3::-webkit-scrollbar-track {
+    background: #223023; /* Cor do track (fundo) da scrollbar */
+    border-radius: 10px; /* Bordas arredondadas para o track */
+}
+
+.div3::-webkit-scrollbar-thumb {
+    background-color: #DB863B; /* Cor do thumb (indicador) da scrollbar */
+    border-radius: 10px; /* Bordas arredondadas para o thumb */
+    border: 2px solid #D9CCC1; /* Borda ao redor do thumb */
+}
+
+/* Scrollbar para o Firefox */
+.div3 {
+    scrollbar-width: thin; /* Largura da scrollbar */
+    scrollbar-color: #DB863B #223023; /* Cor do thumb e do track */
+}
+
+.button-list button {
+    display: block; /* Exibe os botões em blocos, cada um ocupando uma linha */
+    width: 100%; /* Faz com que os botões ocupem 100% da largura disponível */
+    margin-bottom: 10px; /* Espaço entre os botões */
+    padding: 10px;
+    background-color: #DB863B; /* Cor de fundo */
+    color: #D9CCC1; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    transition: background-color 0.3s ease;
+}
+
+.button-list button:hover {
+    color: black;
+    background-color: white;
+}
+
+.button-list button:last-child {
+    margin-bottom: 0; /* Remove o espaçamento inferior do último botão */
+}
     

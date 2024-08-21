@@ -21,7 +21,7 @@ mysqli_query($conn,
     )"
     );
 
-$names = array("Carlos","Gossa","Brich","Carwel","Famir","Lashur","Alathic","Ellan","Myrril","Teth","Fynn","Matep","Eleric","Evarius","Feron","Fendwyr","Cogwyn","Ikari","Shum","Cynem","Odo","Heryd","Diadys","Pollo","Ito","Cassemyr","Ryn","Morwag","Dumas","Knox");
+$names = array("Gossa","Brich","Carwel","Famir","Lashur","Alathic","Ellan","Myrril","Teth","Fynn","Matep","Eleric","Evarius","Feron","Fendwyr","Cogwyn","Ikari","Shum","Cynem","Odo","Heryd","Diadys","Pollo","Ito","Cassemyr","Ryn","Morwag","Dumas","Knox");
 for ($i = 1; $i <= 30; $i++) {
     $name = $names[array_rand($names)];
     $economy = rand(1000, 1000000);

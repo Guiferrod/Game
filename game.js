@@ -1,5 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-
     const king = {
         intellect: 1200,
         religion: 900,
@@ -9,8 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
         militaryPower: 1000,
         victories: 0,
         failures: 0,
-        disease: false
+
+        disease: false,
+        burnt: false
     };
+
+document.addEventListener('DOMContentLoaded', function() {
 
     const cells = document.querySelectorAll('table tbody tr td span');
 
@@ -83,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 var enemies = JSON.parse(xhr.responseText);
 
                 enemies.forEach(function(enemy) {
-                    table += '</td><td>' + enemy.name + '</td><td>' + enemy.economy + '</td><td>' + enemy.territory + '</td><td>' + enemy.military_units + '</td><td>' + enemy.military_power + '</td><td><button class="btn-toBattle">Battle!</button></td></tr>';
+                    table += '<tr><td>' + enemy.name + '</td><td>' + enemy.economy + '</td><td>' + enemy.territory + '</td><td>' + enemy.military_units + '</td><td>' + enemy.military_power + '</td><td><button class="btn-toBattle">Battle!</button></td></tr>';
                 });
 
                 table += '</table>';
@@ -98,27 +100,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         if (cellToCompare) {
                             let tableValue = parseInt(cellToCompare.textContent);
+                            const tableTerritory = parseInt(row.querySelector('td:nth-child(3)').textContent);
 
                             if (king.militaryPower > tableValue) {
-                                const tableTerritory = parseInt(row.querySelector('td:nth-child(3)').textContent);
                                 
-                                // Atualiza território
                                 king.territory += tableTerritory;
-                                
-                                // Atualiza popularidade (cresce 10%)
                                 king.popularity = Math.round(king.popularity * 1.1);
-
-                                // Reduz 20% do militaryPower
                                 king.militaryPower = Math.round(king.militaryPower * 0.8);
+                                king.victories += 1;
 
-                                // Atualiza os valores na tabela
                                 document.getElementById('territory').textContent = king.territory;
                                 cells[3].textContent = king.popularity;
                                 cells[4].textContent = king.territory;
 
-                                // Remove a linha
-                                row.remove();
+                            } else {
+
+                                king.territory -= tableTerritory;
+                                king.popularity = Math.round(king.popularity * 0.9);
+                                king.militaryPower = Math.round(king.militaryPower * 0.3);
+                                king.failures += 1;
+
+                                document.getElementById('territory').textContent = king.territory;
+                                cells[3].textContent = king.popularity;
+                                cells[4].textContent = king.territory;
+
+                                console.log(king.failures)
                             }
+                            row.remove();
                         }
                     });
                 });
