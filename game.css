@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "newFont";
-    src: url(fonts/OldeEnglish.ttf);
+    font-family: "oldeEngFont";
+    src: url(fonts/OldeEnglish.ttf) format('truetype');
 }
 
 body{
@@ -15,7 +15,8 @@ body{
 }
 
 h2 {
-    font-family: 'newFont';
+    font-family: 'oldeEngFont', sans-serif;
+    font-size: xx-large;
 }
 
 .container {
@@ -57,7 +58,9 @@ h2 {
 
 .prfImg {
     height: 400px;
-    width: 300px; 
+    width: 300px;
+    margin: auto;
+    display: block;
 }
 
 
@@ -76,6 +79,16 @@ h2 {
     
     /* Estilo dos links do submenu */
     .subMenu2 button {
+        color: #fcf6e6;
+        background-color: #333;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: inline;
+        text-align: left;
+    }
+
+    #btn-toBattle{
         color: #fcf6e6;
         background-color: #333;
         border: none;
@@ -113,7 +126,16 @@ h2 {
     }
 
 .div3 {
-    background-color: #fcf6e6; /* Verde */
-    border:solid 15px #68584f;
+        background-color: #fcf6e6;
+        border: solid 15px #68584f;
+        height: 100%; /* Garante que ocupe a altura total */
+        overflow-y: auto; /* Adiciona uma barra de rolagem vertical */
+        padding: 20px;
+        box-sizing: border-box;
     }
-
+    
+    .div3 p {
+        margin: 0;
+        line-height: 1.6;
+    }
+    
