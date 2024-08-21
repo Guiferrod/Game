@@ -123,8 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                 document.getElementById('territory').textContent = king.territory;
                                 cells[3].textContent = king.popularity;
                                 cells[4].textContent = king.territory;
-
-                                console.log(king.failures)
                             }
                             row.remove();
                         }
